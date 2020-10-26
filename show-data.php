@@ -6,7 +6,7 @@
 
     foreach($result as $result){ //$result, $res, $hasil, $(apapun)
         $id = $result["id"];
-        $nama = $result["nama"];
+        $name = $result["name"];
         $role = $result["role"];
         $availability = $result["availability"];
         $age = $result["age"];

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
     include "show-data.php";
+    include "update-data.php";
 ?>
 <html>
     <head>
@@ -41,7 +42,7 @@
 
             <!-- MENAMPILKAN NAMA, PEKERJAAN, DESCRIPTION -->
             <div class="description">
-                <h1 id="pName"><?php echo $nama; ?></h1>
+                <h1 id="pName"><?php echo $name; ?></h1>
                 <p id="pRole"><?php echo $role; ?></p>
                 <a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
                 <a href="#" class="button border-blue">Resume</a>
@@ -76,7 +77,11 @@
         <!-- END MENAMPILKAN KOTAK PROFILE -->
 
         <section id="input-form">
-            <form method="#" action="#">
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <div class="form">
+                    <label>Id User</label>
+                    <input id="inpIdUser" type="text" name="id_user" value="<?php echo $id; ?>">
+                </div>
                 <div class="form">
                     <label>Name</label>
                     <input id="inpName" type="text" name="name">
@@ -106,7 +111,7 @@
                     <input id="inpEmail" type="email" name="email">
                 </div>
                 <div class="form">
-                    <input onclick="simpanForm()" type="submit" name="submit" value="SUBMIT" class="bg-blue">
+                    <input onclick="" type="submit" name="submit" value="SUBMIT" class="bg-blue">
                 </div>
             </form>
         </section>
