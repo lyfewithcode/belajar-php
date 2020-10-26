@@ -13,7 +13,5 @@
         $location = $result["location"];
         $experience = $result["years_experience"];
         $email = $result["email"];
-
-        echo "id : ".$id." nama : ".$nama." role : ".$role;
     }
 ?>

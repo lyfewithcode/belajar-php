@@ -1,12 +1,22 @@
 <!DOCTYPE html>
+<?php
+    include "show-data.php";
+?>
 <html>
     <head>
         <title>Profile Page</title>
+
+        <!-- Untuk responsive -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- MENGHUBUNGKAN STYLE CSS -->
         <link rel="stylesheet" href="assets/css/style.css">
+
     </head>
     <body>
+        <!-- MENAMPILKAN TOMBOL MENU -->
         <nav>
+            <!-- Menu saat responsive -->
             <div class="menu-mobile">
                 <a href="#" onclick="showMenu()">Menu</a>
             </div>
@@ -18,40 +28,52 @@
                 <li><a href="#">MY INVENTORY</a></li>
             </ul>
         </nav>
+        <!-- END - MENAMPILKAN TOMBOL MENU -->
 
+        <!-- MENAMPILKAN KOTAK PROFILE -->
         <section id="box-profile">
+
+            <!-- MENAMPILKAN GAMBAR PROFILE -->
             <div class="img-profile">
                 <div class="photo" style="background-image: url(assets/img/profile.jpg);"></div>
             </div>
+            <!-- END - MENAMPILKAN GAMBAR PPROFILE -->
+
+            <!-- MENAMPILKAN NAMA, PEKERJAAN, DESCRIPTION -->
             <div class="description">
-                <h1 id="pName"></h1>
-                <p id="pRole"></p>
+                <h1 id="pName"><?php echo $nama; ?></h1>
+                <p id="pRole"><?php echo $role; ?></p>
                 <a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
                 <a href="#" class="button border-blue">Resume</a>
             </div>
+            <!-- END - MENAMPILKAN NAMA, PEKERJAAN, DESKRIPTION -->
+            
+            <!-- MENAMPILKAN DATA DATA PROFILE -->
             <div class="information">
                 <div class="data">
                     <p class="field">Availability</p>
-                    <p id="pAvailable" class="text-gray"></p>
+                    <p id="pAvailable" class="text-gray"><?php echo $availability; ?></p>
                 </div>
                 <div class="data">
                     <p class="field">Age</p>
-                    <p id="pAge" class="text-gray"></p>
+                    <p id="pAge" class="text-gray"><?php echo $age; ?></p>
                 </div>
                 <div class="data">
                     <p class="field">Location</p>
-                    <p id="pLocation" class="text-gray"></p>
+                    <p id="pLocation" class="text-gray"><?php echo $location; ?></p>
                 </div>
                 <div class="data">
                     <p class="field">Years Experience</p>
-                    <p id="pExperience" class="text-gray"></p>
+                    <p id="pExperience" class="text-gray"><?php echo $experience; ?></p>
                 </div>
                 <div class="data">
                     <p class="field">Email</p>
-                    <p id="pEmail" class="text-gray"></p>
+                    <p id="pEmail" class="text-gray"><?php echo $email; ?></p>
                 </div>
             </div>
+            <!-- END - MENAMPILKAN DATA DATA PROFILE -->
         </section>
+        <!-- END MENAMPILKAN KOTAK PROFILE -->
 
         <section id="input-form">
             <form method="#" action="#">
